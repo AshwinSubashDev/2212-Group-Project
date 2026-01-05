@@ -1,0 +1,727 @@
+{
+  "locations": {
+    "beach": {
+      "name": "beach",
+      "description": "A beach",
+      "items": [],
+      "characters": [],
+      "connections": {
+        "north": "ocean",
+        "east": "jungle",
+        "south": "",
+        "west": "hutOutside"
+      },
+      "imagePath": "images/beach.jpg",
+      "isStartingLocation": true,
+      "isEndingLocation": false,
+      "lockedExits": {},
+      "visited": true,
+      "isDark": false,
+      "revisitDescription": "",
+      "imageCaption": ""
+    },
+    "ocean": {
+      "name": "ocean",
+      "description": "The water looks so clear. You can even see the fish swimming around.",
+      "items": [
+        "fish"
+      ],
+      "characters": [],
+      "connections": {
+        "north": "",
+        "east": "",
+        "south": "beach",
+        "west": ""
+      },
+      "imagePath": "images/ocean.jpg",
+      "isStartingLocation": true,
+      "isEndingLocation": false,
+      "lockedExits": {},
+      "visited": false,
+      "isDark": false,
+      "revisitDescription": "",
+      "imageCaption": ""
+    },
+    "jungle": {
+      "name": "jungle",
+      "description": "The jungle seems full of wild animals",
+      "items": [],
+      "characters": [
+        "parrot",
+        "monkey",
+        "snake"
+      ],
+      "connections": {
+        "north": "",
+        "east": "cave",
+        "south": "",
+        "west": "beach"
+      },
+      "imagePath": "images/jungle.jpg",
+      "isStartingLocation": false,
+      "isEndingLocation": false,
+      "lockedExits": {},
+      "visited": true,
+      "isDark": false,
+      "revisitDescription": "",
+      "imageCaption": ""
+    },
+    "hutOutside": {
+      "name": "hutOutside",
+      "description": "A small hut. Seems big enough for one person. I wonder who lives there.",
+      "items": [
+        "hut"
+      ],
+      "characters": [
+        "hutOwner"
+      ],
+      "connections": {
+        "north": "",
+        "east": "beach",
+        "south": "living_room",
+        "west": "cave"
+      },
+      "imagePath": "images/hutOutside.jpg",
+      "isStartingLocation": false,
+      "isEndingLocation": false,
+      "lockedExits": {},
+      "visited": true,
+      "isDark": false,
+      "revisitDescription": "",
+      "imageCaption": ""
+    },
+    "living_room": {
+      "name": "living_room",
+      "description": "A cozy living room.",
+      "items": [
+        "lantern"
+      ],
+      "characters": [],
+      "connections": {
+        "north": "hutOutside",
+        "east": "kitchen",
+        "south": "",
+        "west": "bedroom"
+      },
+      "imagePath": "images/living-room.jpg",
+      "isStartingLocation": false,
+      "isEndingLocation": false,
+      "lockedExits": {},
+      "visited": true,
+      "isDark": false,
+      "revisitDescription": "",
+      "imageCaption": ""
+    },
+    "kitchen": {
+      "name": "kitchen",
+      "description": "A stocked kitchen.",
+      "items": [
+        "match"
+      ],
+      "characters": [],
+      "connections": {
+        "north": "",
+        "east": "bathroom",
+        "south": "",
+        "west": "living_room"
+      },
+      "imagePath": "images/kitchen.jpg",
+      "isStartingLocation": false,
+      "isEndingLocation": false,
+      "lockedExits": {},
+      "visited": true,
+      "isDark": false,
+      "revisitDescription": "",
+      "imageCaption": ""
+    },
+    "bedroom": {
+      "name": "bedroom",
+      "description": "Messy playroom",
+      "items": [
+        "candle"
+      ],
+      "characters": [],
+      "connections": {
+        "north": "",
+        "east": "living_room",
+        "south": "",
+        "west": "bathroom"
+      },
+      "imagePath": "images/bedroom.jpg",
+      "isStartingLocation": false,
+      "isEndingLocation": false,
+      "lockedExits": {},
+      "visited": true,
+      "isDark": false,
+      "revisitDescription": "",
+      "imageCaption": ""
+    },
+    "bathroom": {
+      "name": "bathroom",
+      "description": "A clean bathroom.",
+      "items": [],
+      "characters": [],
+      "connections": {
+        "north": "",
+        "east": "bedroom",
+        "south": "",
+        "west": "kitchen"
+      },
+      "imagePath": "images/bathroom.jpg",
+      "isStartingLocation": false,
+      "isEndingLocation": false,
+      "lockedExits": {},
+      "visited": true,
+      "isDark": false,
+      "revisitDescription": "",
+      "imageCaption": ""
+    },
+    "cave": {
+      "name": "cave",
+      "description": "Dark and spooky cave. I wonder what\u0027s hidden inside",
+      "items": [
+        "chest"
+      ],
+      "characters": [],
+      "connections": {
+        "north": "witchesLair",
+        "east": "hutOutside",
+        "south": "",
+        "west": "jungle"
+      },
+      "imagePath": "images/cave.jpg",
+      "isStartingLocation": false,
+      "isEndingLocation": false,
+      "lockedExits": {
+        "north": "working_lantern"
+      },
+      "visited": true,
+      "isDark": true,
+      "revisitDescription": "",
+      "imageCaption": ""
+    },
+    "witchesLair": {
+      "name": "witchesLair",
+      "description": "Secret cavern where the witch lives.",
+      "items": [],
+      "characters": [
+        "witch"
+      ],
+      "connections": {
+        "north": "",
+        "east": "",
+        "south": "cave",
+        "west": ""
+      },
+      "imagePath": "images/witches-lair.jpg",
+      "isStartingLocation": false,
+      "isEndingLocation": true,
+      "lockedExits": {},
+      "visited": false,
+      "isDark": true,
+      "revisitDescription": "",
+      "imageCaption": ""
+    }
+  },
+  "items": {
+    "lantern": {
+      "name": "lantern",
+      "description": "Portable lantern. Seems like it needs a candle to work",
+      "isPickable": true,
+      "attributes": [],
+      "containedItems": [],
+      "examined": false,
+      "reusable": false,
+      "imagePath": "images/lantern.png",
+      "combinableWith": {
+        "target": "lit_candle",
+        "result": "working_lantern"
+      },
+      "hidden": false,
+      "isContainer": false,
+      "locked": false,
+      "keyItem": "",
+      "dimensions": [
+        760,
+        40,
+        50,
+        70
+      ]
+    },
+    "working_lantern": {
+      "name": "working_lantern",
+      "description": "Working lantern. Can be used as a light source.",
+      "isPickable": true,
+      "attributes": [],
+      "containedItems": [],
+      "examined": false,
+      "reusable": true,
+      "imagePath": "images/working-lantern.jpg",
+      "combinableWith": {
+        "target": "",
+        "result": ""
+      },
+      "hidden": false,
+      "isContainer": false,
+      "locked": false,
+      "keyItem": "",
+      "dimensions": [
+        70,
+        70,
+        50,
+        50
+      ]
+    },
+    "candle": {
+      "name": "candle",
+      "description": "A wax candle. Looks like you need to light it.",
+      "isPickable": true,
+      "attributes": [],
+      "containedItems": [],
+      "examined": false,
+      "reusable": false,
+      "imagePath": "images/candle.png",
+      "combinableWith": {
+        "target": "match",
+        "result": "lit_candle"
+      },
+      "hidden": false,
+      "isContainer": false,
+      "locked": false,
+      "keyItem": "",
+      "dimensions": [
+        335,
+        150,
+        50,
+        70
+      ]
+    },
+    "lit_candle": {
+      "name": "lit_candle",
+      "description": "A light candle. Seems like it will fit inside a lantern.",
+      "isPickable": false,
+      "attributes": [],
+      "containedItems": [],
+      "examined": false,
+      "reusable": false,
+      "imagePath": "images/lit-candle.png",
+      "combinableWith": {
+        "target": "lantern",
+        "result": "working_lantern"
+      },
+      "hidden": false,
+      "isContainer": false,
+      "locked": false,
+      "keyItem": "",
+      "dimensions": [
+        100,
+        80,
+        50,
+        50
+      ]
+    },
+    "fishing_pole": {
+      "name": "fishing_pole",
+      "description": "A sturdy fishing pole. Seems great for fishing.",
+      "isPickable": true,
+      "attributes": [],
+      "containedItems": [],
+      "examined": false,
+      "reusable": false,
+      "imagePath": "images/fishing_pole.png",
+      "combinableWith": {
+        "target": "",
+        "result": ""
+      },
+      "hidden": false,
+      "isContainer": false,
+      "locked": false,
+      "keyItem": "",
+      "dimensions": [
+        800,
+        370,
+        60,
+        60
+      ]
+    },
+    "fish": {
+      "name": "fish",
+      "description": "A cute blue fish",
+      "isPickable": false,
+      "attributes": [],
+      "containedItems": [],
+      "examined": false,
+      "reusable": false,
+      "imagePath": "images/fish.png",
+      "combinableWith": {
+        "target": "",
+        "result": ""
+      },
+      "hidden": false,
+      "isContainer": false,
+      "locked": false,
+      "keyItem": "",
+      "dimensions": [
+        520,
+        302,
+        70,
+        70
+      ]
+    },
+    "caught_fish": {
+      "name": "caught_fish",
+      "description": "A cute blue fish",
+      "isPickable": true,
+      "attributes": [],
+      "containedItems": [],
+      "examined": false,
+      "reusable": false,
+      "imagePath": "images/fish.png",
+      "combinableWith": {
+        "target": "",
+        "result": ""
+      },
+      "hidden": false,
+      "isContainer": false,
+      "locked": false,
+      "keyItem": "",
+      "dimensions": [
+        450,
+        302,
+        70,
+        70
+      ]
+    },
+    "match": {
+      "name": "match",
+      "description": "A match. Could be used to light things",
+      "isPickable": true,
+      "attributes": [],
+      "containedItems": [],
+      "examined": false,
+      "reusable": false,
+      "imagePath": "images/matchbox.png",
+      "combinableWith": {
+        "target": "candle",
+        "result": "lit_candle"
+      },
+      "hidden": false,
+      "isContainer": false,
+      "locked": false,
+      "keyItem": "",
+      "dimensions": [
+        520,
+        302,
+        60,
+        60
+      ]
+    },
+    "house_key": {
+      "name": "house_key",
+      "description": "Silver key. Looks like a house key.",
+      "isPickable": true,
+      "attributes": [],
+      "containedItems": [],
+      "examined": false,
+      "reusable": false,
+      "imagePath": "images/house_key.png",
+      "combinableWith": {
+        "target": "",
+        "result": ""
+      },
+      "hidden": false,
+      "isContainer": false,
+      "locked": false,
+      "keyItem": "",
+      "dimensions": [
+        100,
+        400,
+        50,
+        50
+      ]
+    },
+    "apple": {
+      "name": "apple",
+      "description": "A tasty looking apple.",
+      "isPickable": true,
+      "attributes": [],
+      "containedItems": [],
+      "examined": false,
+      "reusable": false,
+      "imagePath": "images/apple.png",
+      "combinableWith": {
+        "target": "",
+        "result": ""
+      },
+      "hidden": false,
+      "isContainer": false,
+      "locked": false,
+      "keyItem": "",
+      "dimensions": [
+        170,
+        340,
+        60,
+        60
+      ]
+    },
+    "chest_key": {
+      "name": "chest_key",
+      "description": "A brass key. Locks like it can unlock something.",
+      "isPickable": true,
+      "attributes": [],
+      "containedItems": [],
+      "examined": false,
+      "reusable": false,
+      "imagePath": "images/chest-key.png",
+      "combinableWith": {
+        "target": "",
+        "result": ""
+      },
+      "hidden": false,
+      "isContainer": false,
+      "locked": false,
+      "keyItem": "",
+      "dimensions": [
+        200,
+        400,
+        50,
+        50
+      ]
+    },
+    "spellBook": {
+      "name": "spellBook",
+      "description": "An ancient looking spell book.",
+      "isPickable": true,
+      "attributes": [],
+      "containedItems": [],
+      "examined": false,
+      "reusable": false,
+      "imagePath": "images/spell-book.png",
+      "combinableWith": {
+        "target": "",
+        "result": ""
+      },
+      "hidden": false,
+      "isContainer": false,
+      "locked": false,
+      "keyItem": "",
+      "dimensions": [
+        340,
+        400,
+        50,
+        50
+      ]
+    },
+    "chest": {
+      "name": "chest",
+      "description": "A locked wooden chest. Perhaps it needs a key to be opened.",
+      "isPickable": false,
+      "attributes": [],
+      "containedItems": [],
+      "examined": false,
+      "reusable": false,
+      "imagePath": "images/chest.png",
+      "combinableWith": {
+        "target": "",
+        "result": ""
+      },
+      "hidden": false,
+      "isContainer": false,
+      "locked": false,
+      "keyItem": "",
+      "dimensions": [
+        140,
+        305,
+        130,
+        130
+      ]
+    },
+    "hut": {
+      "name": "hut",
+      "description": "A small hut.",
+      "isPickable": false,
+      "attributes": [],
+      "containedItems": [],
+      "examined": false,
+      "reusable": true,
+      "imagePath": "images/hut.png",
+      "combinableWith": {
+        "target": "",
+        "result": ""
+      },
+      "hidden": false,
+      "isContainer": false,
+      "locked": false,
+      "keyItem": "",
+      "dimensions": [
+        150,
+        230,
+        200,
+        150
+      ]
+    }
+  },
+  "characters": {
+    "parrot": {
+      "name": "parrot",
+      "description": "A talking parrot. I wonder what it has to say.",
+      "dialogue": [
+        "I\u0027m hungry. I wish I had something to eat."
+      ],
+      "itemsWanted": [
+        "apple"
+      ],
+      "itemsPossessed": [
+        "scroll"
+      ],
+      "discovered": true,
+      "dialogueIndex": 0,
+      "imagePath": "images/parrot.png",
+      "dimensions": [
+        140,
+        205,
+        150,
+        150
+      ]
+    },
+    "hutOwner": {
+      "name": "hutOwner",
+      "description": "Seems like they own this hut. Maybe I should talk to them.",
+      "dialogue": [
+        "Hello there I\u0027m Bob. I can\u0027t seem to find the key to my house.",
+        "Have you seen it anywhere?"
+      ],
+      "itemsWanted": [
+        "house_key"
+      ],
+      "itemsPossessed": [],
+      "discovered": true,
+      "dialogueIndex": 0,
+      "imagePath": "images/hut-owner.png",
+      "dimensions": [
+        360,
+        280,
+        150,
+        150
+      ]
+    },
+    "witch": {
+      "name": "witch",
+      "description": "A powerful witch. Hopefully they\u0027re helpful.",
+      "dialogue": [
+        "Hello traveller.",
+        "I see you\u0027re far from home.",
+        "Depending on what you can offer me, I might be willing to help you get back home.",
+        "I lost my spell book recently. If you return it to me I\u0027ll send you home."
+      ],
+      "itemsWanted": [
+        "spellBook"
+      ],
+      "itemsPossessed": [],
+      "discovered": true,
+      "dialogueIndex": 0,
+      "imagePath": "images/witch.png",
+      "dimensions": [
+        150,
+        100,
+        250,
+        350
+      ]
+    },
+    "monkey": {
+      "name": "monkey",
+      "description": "A cute monkey",
+      "dialogue": [],
+      "itemsWanted": [],
+      "itemsPossessed": [],
+      "discovered": true,
+      "dialogueIndex": 0,
+      "imagePath": "images/monkey.png",
+      "dimensions": [
+        600,
+        20,
+        250,
+        250
+      ]
+    },
+    "snake": {
+      "name": "snake",
+      "description": "A scary looking snake. Hope he doesn\u0027t bite.",
+      "dialogue": [],
+      "itemsWanted": [],
+      "itemsPossessed": [],
+      "discovered": true,
+      "dialogueIndex": 0,
+      "imagePath": "images/snake.png",
+      "dimensions": [
+        500,
+        300,
+        200,
+        100
+      ]
+    }
+  },
+  "inventory": {
+    "itemNames": [
+      "house_key",
+      "fishing_pole"
+    ]
+  },
+  "currentLocationName": "hutOutside",
+  "turnsTaken": 48,
+  "useRules": [
+    {
+      "itemUsed": "chest_key",
+      "targetItem": "chest",
+      "resultDescription": "You found an apple inside the chest!",
+      "resultingItems": [
+        "apple"
+      ],
+      "revealItems": [],
+      "scoreChange": 0,
+      "endsGame": false,
+      "winsGame": false
+    },
+    {
+      "itemUsed": "fishing_pole",
+      "targetItem": "fish",
+      "resultDescription": "You caught a fish!",
+      "resultingItems": [
+        "caught_fish"
+      ],
+      "revealItems": [],
+      "scoreChange": 0,
+      "endsGame": false,
+      "winsGame": false
+    }
+  ],
+  "giveRules": [
+    {
+      "characterName": "parrot",
+      "itemOrAttribute": "apple",
+      "responseMessage": "Thank you for the food! Here\u0027s something I found the other day. I\u0027m not sure what it is.",
+      "rewardItems": [
+        "spellBook"
+      ],
+      "endsGame": false
+    },
+    {
+      "characterName": "witch",
+      "itemOrAttribute": "spellBook",
+      "responseMessage": "Thank you for finding my spell book! As a reward I will send you home.",
+      "rewardItems": [],
+      "endsGame": true
+    },
+    {
+      "characterName": "hutOwner",
+      "itemOrAttribute": "house_key",
+      "responseMessage": "I\u0027ve been looking everywhere for these keys! As a thank you, I\u0027ll give you a chest key. I hope it can be useful.",
+      "rewardItems": [
+        "chest_key"
+      ],
+      "endsGame": false
+    }
+  ],
+  "gameMessage": "Seems like they own this hut. Maybe I should talk to them.",
+  "gameOver": false
+}
